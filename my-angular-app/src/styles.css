@@ -1,0 +1,201 @@
+.data{
+    background-color: rgb(255, 255, 255);
+    height: 200px;
+    margin-right: 20px; border: 1px solid #ccc; padding: 20px; margin-left: 10%; width: 450px;
+}
+
+.resource{
+    background-color: rgb(255, 255, 255);
+    height: 50px;
+}
+input{
+
+    border: 1px solid #ccc;
+}
+.reserve{
+    background-color: rgb(255, 255, 255);
+    height: 200px;
+    padding: 10px;
+
+}
+.mainnnn{
+    background-color: rgb(255, 255, 255);
+    height: 120px;
+    padding: 10px;
+    margin-bottom: 20px;
+
+}
+body{
+    background-color: rgb(229, 229, 229);
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-gap: 10px; 
+  }
+  
+.toggle-slider {
+  width: 50px;
+  height: 25px;
+  background-color: #ccc;
+  border-radius: 25px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.slider {
+  width: 25px;
+  height: 25px;
+  background-color: #a1afba;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.4s;
+}
+
+
+.toggle-slider.toggled .slider {
+  left: 25px;
+}
+
+
+.delete-button {
+    background-color: #ff5733;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out; 
+    margin-left: 150px;
+    margin-bottom: 40px;
+    margin-top: 20px;
+  }
+  
+  .delete-button:hover {
+    background-color: #e3342f;
+    transform: translateY(-5px);
+  }
+
+.radio-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 250px;
+padding: 8px;
+    cursor: pointer;
+  }
+  
+  .radio-label input[type="radio"] {
+    margin-right: 2px;
+  }
+  
+
+.radio-group {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .radio-label {
+    display: flex;
+    align-items: center;
+  }
+  
+ 
+  .counter-button {
+    background-color: #ff5733;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .counter-button:hover {
+    background-color: #e3342f;
+  }
+  
+  .counter-input {
+    width: 50px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .more-person-options {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+.day-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .toggle-slider {
+    width: 40px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .toggled {
+    background-color: #0d74cd;
+  }
+  
+  .day-name {
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  .date-section {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .date-pair {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .date-input {
+    margin-right: 20px;
+  }
+  
+  .counter-section {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .counter-button {
+    background-color: #ff5733;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    margin-right: 5px;
+  }
+  
+  .counter-button:hover {
+    background-color: #e3342f;
+  }
+  
+  .counter-input {
+    width: 40px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  

@@ -1,0 +1,96 @@
+
+<div style="clear: both; " class="form-group">
+  <button type="button" (click)="deleteImage()" class="delete-button">
+    Delete Image
+  </button>
+</div>
+
+
+<div style="display: flex;">
+  <div class="data">
+    <form>
+      <div class="form-group" style="display: flex; align-items: center; gap: 10%;">
+        <label for="name">Name:</label>
+         <input type="text" id="name" name="name" [(ngModel)]="resource.name" required style=" margin-left: 12px; width: 200px; padding: 5px;">
+          </div>
+           <br>
+             <div class="form-group" style="display: flex; align-items: center; gap: 10%;">
+              <label for="image" style="margin-right: 10px;">Image:</label>
+                <input type="file" id="image" name="image" (change)="onImageUpload($event)" style="padding: 5px;">
+                  <img [src]="resource.imageUrl" width="120px" alt="Resource Image" *ngIf="resource.imageUrl">
+        </div>
+       </form>
+
+    <br> <br><br>
+   
+        </div>
+      <div>
+  
+  <div class="resource">
+    <div class="form-group" style="display: flex; align-items: center;padding-left: 2%;">
+      <label style="font-weight: bold;width: 200px;">Choose resourve type:</label>
+       <label class="radio-label">
+        <input type="radio" name="duration" [(ngModel)]="resource.duration" value="1">
+        One Day
+          </label>
+      <label class="radio-label">
+        <input type="radio" name="duration" [(ngModel)]="resource.duration" value="2">
+        More than 1 Day
+      </label>
+    </div>
+  </div>
+  <br>
+
+
+  <div class="reserve">
+    <div class="form-group">
+      <label>Time of resource:</label>
+       <div class="radio-group">
+        <label class="radio-label">
+          <input type="radio" name="selection" [(ngModel)]="resource.selection" value="Ftime">
+          Service Time
+        </label>
+          <label class="radio-label">
+           <input type="radio" name="selection" [(ngModel)]="resource.selection" value="Stime">
+          Fixed Time
+        </label>
+      </div>
+    </div>
+    
+
+    <div class="form-group" *ngIf="resource.selection === 'Stime'">
+      <div class="fixed-time-options">
+        <button class="counter-button" (click)="decrementCounter()">-</button>
+         <input type="number" [(ngModel)]="counter" class="counter-input"> 
+          <button class="counter-button" (click)="incrementCounter()">+</button>
+      </div>
+    </div>
+  
+    <br>
+  
+
+    <div class="form-group">
+      <label>Multiple Reservation:</label>
+        <div class="radio-group">
+         <label class="radio-label">
+          <input type="radio" name="selection" [(ngModel)]="resource.selections" value="person">
+          One Person
+        </label>
+         <label class="radio-label">
+           <input type="radio" name="selection" [(ngModel)]="resource.selections" value="more">
+          More than 1 Person
+        </label>
+      </div>
+    </div>
+  
+    <div class="form-group" *ngIf="resource.selections === 'more'">
+      <div class="more-person-options">
+        <button class="counter-button" (click)="decrementCounters()">-</button>
+        <input type="number" [(ngModel)]="counters" class="counter-input">
+        <button class="counter-button" (click)="incrementCounters()">+</button>
+      </div>
+     </div>
+  </div>
+  <br><br>
+  
+  

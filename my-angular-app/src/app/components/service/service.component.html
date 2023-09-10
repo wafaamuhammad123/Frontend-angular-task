@@ -1,0 +1,32 @@
+<div class="mainnnn" *ngFor="let day of days; let i = index" style="margin-left: 100px; margin-right: 100px;padding: 20px;">
+    <div class="day-container">
+      <div class="toggle-slider" [class.toggled]="day.enabled" (click)="toggleDay(day)">
+        <div class="slider"></div>
+      </div>
+      <span class="day-name">{{ day.name }}</span>
+    </div>
+
+    <div *ngIf="day.enabled" class="date-section">
+     <!-- show data when toggle is turned on -->
+      <div *ngFor="let datePair of day.datePairs; let j = index" class="date-pair">
+        <div class="date-input">
+          <label for="start{{ i }}_{{ j }}">Start Date:</label>
+          <input type="text" id="start{{ i }}_{{ j }}" name="start{{ i }}_{{ j }}" [(ngModel)]="datePair.startDate">
+        </div>
+
+        <div class="date-input">
+          <label for="end{{ i }}_{{ j }}">End Date:</label>
+          <select id="end{{ i }}_{{ j }}" name="end{{ i }}_{{ j }}" [(ngModel)]="datePair.endDate">
+            <option *ngFor="let time of endTimes" [value]="time">{{ time }}</option>
+          </select>
+        </div>
+      </div>
+      
+      <div class="counter-section">
+        <button class="counter-button" (click)="decrementCounter(day)">-</button>
+        <input type="number" [(ngModel)]="day.datePairs.length" class="counter-input">
+        <button class="counter-button" (click)="incrementCounter(day)">+</button>
+      </div>
+    </div>
+  </div>
+  
